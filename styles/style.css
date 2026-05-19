@@ -63,12 +63,12 @@
 
 .header__theme-menu {
   align-self: center;
-  justify-self: end;
+  justify-self: center;
 }
 
 .header__theme-menu-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
 }
 
@@ -134,7 +134,7 @@
   font-weight: bold;
   line-height: 0.825;
   color: var(--focus-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /* Подзаголовок шапки */
@@ -347,9 +347,10 @@
 
 .footer__title {
   align-self: center;
+  text-align: center;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   line-height: 0.825;
   color: var(--focus-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }

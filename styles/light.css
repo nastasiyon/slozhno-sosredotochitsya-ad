@@ -18,26 +18,44 @@
   background-image: var(--bg-image);
 }
 
+.theme-light .decorated-zone::before {
+  border-block-start: 1px solid var(--text-color);
+  border-inline-end: 1px solid var(--text-color);
+}
+
+.theme-light .decorated-zone::after {
+  border-block-end: 1px solid var(--text-color);
+  border-inline-start: 1px solid var(--text-color);
+}
+
 /* Кнопки темы — светлая тема */
 .theme-light .header__theme-menu-button {
-  color: var(--accent-color);
+  color: var(--text-color);
 }
 
 .theme-light .header__theme-menu-button:hover {
-  outline: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+  outline: 1px solid color-mix(in srgb, var(--text-color) 40%, transparent);
 }
 
 .theme-light .header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--text-color);
 }
 
 .theme-light .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--text-color);
 }
 
 /* Бейдж REC скрыт в светлой теме */
 .theme-light .header__rec-badge {
   display: none;
+}
+
+.theme-light .content__section-title {
+  color: var(--text-color);
+}
+
+.theme-light .title-decor{
+  color: var(--text-color);
 }
 
 /* ==============================
