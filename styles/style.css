@@ -32,8 +32,8 @@
   inset-inline-end: 10px;
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--text-color);
-  border-inline-end: 1px solid var(--text-color);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
 }
 
 /* Уголок — левый нижний */
@@ -44,8 +44,8 @@
   inset-inline-start: 10px;
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--text-color);
-  border-inline-start: 1px solid var(--text-color);
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
 }
 
 /* ==============================
@@ -133,7 +133,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   line-height: 0.825;
-  color: var(--accent-color);
+  color: var(--focus-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -174,10 +174,12 @@
   gap: 20px;
 }
 
+
 .content__section-title {
   font-size: var(--font-size);
   font-weight: bold;
   line-height: var(--line-height);
+  color: var(--accent-color);
 }
 
 /* ==============================
@@ -186,7 +188,13 @@
 
 .content__cards {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
+}
+
+/* Три колонки — только секция 2 */
+.content__cards--three-cols {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card__title {
@@ -220,6 +228,21 @@
 }
 
 /* ==============================
+   ПРАВАЯ КОЛОНКА СЕКЦИИ 3
+   ============================== */
+
+.content__section-content {
+  display: grid;
+  gap: 20px;
+}
+
+.content__section-subtitle {
+  font-size: var(--font-size);
+  font-weight: bold;
+  line-height: var(--line-height);
+}
+
+/* ==============================
    ГАЛЕРЕЯ
    ============================== */
 
@@ -241,32 +264,10 @@
 }
 
 /* ==============================
-   ПОДВАЛ
-   ============================== */
-
-.footer {
-  display: grid;
-  place-items: center;
-  padding: 10px;
-  block-size: 100vh;
-  min-block-size: 668px;
-}
-
-.footer__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-weight: bold;
-  line-height: 0.825;
-  color: var(--accent-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-/* ==============================
    ПЛАНШЕТ — 768px+
    ============================== */
 
-@media (width >=768px) {
-
-  /* Уголки */
+@media (width >= 768px) {
   .decorated-zone::before {
     inset-block-start: 20px;
     inset-inline-end: 20px;
@@ -277,7 +278,6 @@
     inset-inline-start: 20px;
   }
 
-  /* Шапка */
   .header {
     padding: 20px;
   }
@@ -295,46 +295,27 @@
     max-inline-size: 364px;
   }
 
-  /* Контент */
   .content {
     gap: 80px;
     padding-block: 60px;
     padding-inline: 20px;
   }
 
-  /* Секции: title слева, cards справа */
+  /* Все секции: заголовок слева, контент справа */
   .content__section {
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
   }
 
-  /* Секции, где title растянут на всю ширину */
-  .content__section:has(.content__section-title.title-decor) {
-    grid-template-columns: 1fr;
-  }
-
-  .content__section:has(.content__section-title.title-decor) .content__cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Галерея — 2 колонки */
+  /* Галерея — 3 колонки */
   .gallery__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .gallery__image:nth-child(1) {
-    grid-column: span 2;
-  }
+  .gallery__image:nth-child(1) { grid-column: span 2; }
+  .gallery__image:nth-child(2) { grid-row: span 2; }
+  .gallery__image:nth-child(3) { grid-row: span 2; }
+  .gallery__image:nth-child(5) { grid-column: span 2; }
 
-  .gallery__image:nth-child(2) {
-    grid-row: span 2;
-  }
-
-  .gallery__image:nth-child(5) {
-    grid-column: span 2;
-  }
-
-  /* Подвал */
   .footer {
     padding: 20px;
   }
@@ -348,11 +329,9 @@
    ДЕСКТОП — 1024px+
    ============================== */
 
-@media (width >=1024px) {
-
-  /* Контент */
-  .content {
-    padding-inline: 20px;
+@media (width >= 1024px) {
+  .header__theme-menu-list {
+    flex-direction: row;
   }
 
   /* Обычные секции (без title-decor на заголовке секции) */
@@ -360,17 +339,17 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  .content__cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Секции с заголовком-декором: три карточки */
-  .content__section:has(.content__section-title.title-decor) .content__cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   /* Тема навигации — горизонтальная на десктопе */
   .header__theme-menu-list {
     flex-direction: row;
   }
+}
+
+.footer__title {
+  align-self: center;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: bold;
+  line-height: 0.825;
+  color: var(--focus-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
