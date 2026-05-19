@@ -1,40 +1,169 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Сложно сосредоточиться</title>
-    <script src="./scripts/script.js"></script>
-  </head>
-  <body class="page">
-    <header class="header decorated-zone">
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Сложно сосредоточиться</title>
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/globals.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/dark.css" />
+  <link rel="stylesheet" href="./styles/light.css" />
+  <script src="./scripts/script.js"></script>
+</head>
+
+<body class="page">
+  <header class="header decorated-zone">
+    <nav class="header__theme-menu">
+      <ul class="header__theme-menu-list">
+        <li class="header__theme-menu-item">
+          <button class="header__theme-menu-button header__theme-menu-button_type_light">
+            День
+          </button>
+        </li>
+        <li class="header__theme-menu-item">
+          <button class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+            disabled>
+            Авто
+          </button>
+        </li>
+        <li class="header__theme-menu-item">
+          <button class="header__theme-menu-button header__theme-menu-button_type_dark">
+            Неон
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <span class="header__rec-badge" aria-hidden="true"></span>
+    <h1 class="header__title">no focus</h1>
+    <p class="header__subtitle title-decor">
+      Что делать, когда не можешь делать ничего<br />Или почти ничего
+    </p>
+  </header>
+
+  <main class="content">
+    <section class="section content__section">
+      <h2 class="content__section-title">Почему сосредоточиться так сложно</h2>
+      <ul class="content__cards">
+        <li class="card">
+          <h3 class="card__title title-decor">Многозадачность</h3>
+          <p class="card__text">
+            Особенно советуют обратить внимание на ограничение многозадачности.
+            Каждый раз, когда вы переключаетесь между задачами, мозг вынужден
+            «перезагружаться» и немного зависает в мыслях о предыдущей задаче.
+          </p>
+        </li>
+        <li class="card">
+          <h3 class="card__title title-decor">Дофамин</h3>
+          <p class="card__text">
+            С каждым разом для получения дофаминового всплеска нужно всё больше
+            усилий. Экраны и приложения специально спроектированы так, чтобы
+            вызывать зависимость — уведомления, лайки, новые сообщения — всё это
+            маленькие дозы удовольствия.
+          </p>
+        </li>
+        <li class="card">
+          <h3 class="card__title title-decor">5 часов утра</h3>
+          <p class="card__text">
+            Если вы не высыпаетесь, ваш мозг просто не может работать в полную
+            силу. Недосып влияет на концентрацию, память и принятие решений.
+            Регулярный сон — лучший ноотроп.
+          </p>
+        </li>
+        <li class="card">
+          <h3 class="card__title title-decor">Еда</h3>
+          <p class="card__text">
+            Мозг — главный потребитель глюкозы в организме. Длинные перерывы между
+            едой или неправильный рацион существенно снижают когнитивные
+            способности и скорость мышления.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section content__section">
+      <h2 class="content__section-title title-decor">
+        Что снижает концентрацию внимания?
+      </h2>
+      <ul class="content__cards">
+        <li class="card">
+          <h3 class="card__title">Социальные сети</h3>
+          <p class="card__text">
+            Бесконечная прокрутка лент, уведомления и яркий контент нарушают
+            способность мозга сосредоточиться на одной задаче. Мозг привыкает к
+            постоянным мини-стимулам и начинает требовать их всё чаще.
+          </p>
+        </li>
+        <li class="card">
+          <h3 class="card__title">Открытые пространства</h3>
+          <p class="card__text">
+            Open space и шумная рабочая среда разрушают концентрацию. Фоновый шум
+            снижает производительность умственного труда даже тогда, когда вы
+            к нему привыкли. Наушники — ваш лучший инструмент.
+          </p>
+        </li>
+        <li class="card">
+          <h3 class="card__title">Стресс</h3>
+          <p class="card__text">
+            Кортизол и адреналин переводят мозг в режим «бороться или бежать». В
+            этом состоянии не до концентрации: мозг постоянно сканирует угрозы,
+            а не занимается сложными когнитивными задачами.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section content__section">
+      <h2 class="content__section-title">Как концентрация может помочь?</h2>
+      <ul class="content__cards">
+        <li class="card">
+          <h3 class="card__title title-decor">5–20–5</h3>
+          <p class="card__text">
+            Попробуйте технику интервалов: 5 минут разминки, 20 минут активной
+            работы, 5 минут отдыха. Мозг привыкнет к ритму, и сосредоточиться
+            станет заметно легче.
+          </p>
+        </li>
+        <li class="card">
+          <h3 class="card__title title-decor">Освоите новый навык</h3>
+          <p class="card__text">
+            Когда вы учите что-то новое — язык, инструмент, код — мозг строит
+            новые нейронные связи. Это само по себе тренирует способность
+            концентрироваться.
+          </p>
+        </li>
+        <li class="card">
+          <h3 class="card__title title-decor">Повысите продуктивность</h3>
+          <p class="card__text">
+            Глубокая работа позволяет делать значимый вклад за меньшее время.
+            Концентрация — самый ценный актив в мире постоянных отвлечений.
+            <a href="#">Подробнее о техниках</a> в нашем блоге.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section gallery">
+      <h2 class="content__section-title title-decor">А можно в картинках?</h2>
+      <div class="gallery__grid">
+        <img class="gallery__image" src="./images/sunset.png" alt="Закат в горах с яркими оранжевыми оттенками"
+          loading="lazy" />
+        <img class="gallery__image" src="./images/ice-cream.png" alt="Мороженое в вафельном рожке" loading="lazy" />
+        <img class="gallery__image" src="./images/tape.png" alt="Кассетная лента на ярком фоне" loading="lazy" />
+        <img class="gallery__image" src="./images/books.png" alt="Стопка разноцветных книг" loading="lazy" />
+        <img class="gallery__image" src="./images/street.png" alt="Пустая улица с неоновой подсветкой" loading="lazy" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer decorated-zone">
+    <p class="footer__title">no focus</p>
+  </footer>
+</body>
+
 </html>
