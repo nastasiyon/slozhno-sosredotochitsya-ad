@@ -385,7 +385,15 @@
 /* ==============================
    ПЛАНШЕТ — 768-1024px
    ============================== */
+@media (768px <= width < 1024px) {
+  .header__subtitle {
+    align-self: flex-start;
+  }
 
+  .content__section.ipad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /* ==============================
    ДЕСКТОП — 1024px+
    ============================== */
@@ -404,19 +412,11 @@
 
   .header__title {
     align-self: flex-start;
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    font-weight: bold;
-    line-height: 0.825;
-    color: var(--focus-color);
-    text-shadow: 2px 2px 0 var(--accent-color);
   }
 
   /* Подзаголовок шапки */
   .header__subtitle {
     align-self: flex-start;
-    justify-self: end;
-    max-inline-size: 50%;
-    font-weight: bold;
   }
 
   /* Обычные секции (без title-decor на заголовке секции) */
