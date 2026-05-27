@@ -23,3 +23,54 @@
 .theme-dark .header__rec-badge {
   display: flex;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --focus-color: #db00ff;
+  --title-decor-color: #000028;
+  --bg-image: url('../images/cover-image-dark.png');
+  }
+
+  .page {
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+  }
+
+
+  .decorated-zone::before {
+    border-block-start: 1px solid var(--accent-color);
+    border-inline-end: 1px solid var(--accent-color);
+  }
+
+  .decorated-zone::after {
+    border-block-end: 1px solid var(--accent-color);
+    border-inline-start: 1px solid var(--accent-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    outline: 1px solid var(--accent-color);
+  }
+
+  .header__theme-menu-button_active {
+    outline: 1px solid var(--accent-color);
+  }
+  
+  .content__section-title {
+    color: var(--accent-color);
+  }
+
+  .title-decor {
+    color: var(--title-decor-color);
+  }
+}

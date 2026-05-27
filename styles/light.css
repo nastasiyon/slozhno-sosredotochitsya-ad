@@ -110,4 +110,8 @@
   .content__section-title {
     color: var(--text-color);
   }
+
+  .title-decor {
+    color: var(--text-color);
+  }
 }
