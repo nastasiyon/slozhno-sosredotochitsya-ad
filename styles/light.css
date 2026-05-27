@@ -104,11 +104,6 @@
   .header__theme-menu-button_active {
     outline: 1px solid var(--text-color);
   }
-
-  /* Бейдж REC скрыт в светлой теме */
-  .header__rec-badge {
-    display: none;
-  }
   
   .content__section-title {
     color: var(--text-color);

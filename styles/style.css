@@ -28,8 +28,8 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  inset-block-start: 10px;
-  inset-inline-end: 10px;
+  inset-block-start: 20px;
+  inset-inline-end: 20px;
   inline-size: 25px;
   block-size: 25px;
   border-block-start: 1px solid var(--accent-color);
@@ -56,7 +56,7 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   align-items: start;
-  padding: 10px;
+  padding: 20px 20px 0 20px;
   block-size: 100vh;
   min-block-size: 668px;
 }
@@ -72,6 +72,18 @@
   gap: 10px;
 }
 
+.text__link:hover {
+  outline: 1px solid color(var(--text-color));
+}
+
+.text__link:focus {
+  outline: none;
+}
+
+.text__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
 .header__theme-menu-button {
   padding: 3px 13px;
   background: transparent;
@@ -85,7 +97,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+  outline: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button:focus {
@@ -93,7 +105,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid color(var(--accent-color));
 }
 
 .header__theme-menu-button_active {
@@ -104,8 +116,8 @@
 /* Бейдж REC — только тёмная тема */
 .header__rec-badge {
   position: absolute;
-  inset-block-start: 1.3%;
-  inset-inline-end: 1.5%;
+  inset-block-start: 20px;
+  inset-inline-end: 29px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -293,7 +305,7 @@
   font-weight: bold;
   line-height: 0.825;
   color: var(--focus-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /* ==============================
@@ -301,19 +313,23 @@
    ============================== */
 
 @media (width < 768px) {
+  .header {
+    padding: 10px 10px 0 10px;
+  }
+
     .header__rec-badge {
-    inset-block-start: 2.3%;
-    inset-inline-end: 4%;
+    inset-block-start: 10px;
+    inset-inline-end: 19px;
   }
 
   .decorated-zone::before {
-    inset-block-start: 2%;
-    inset-inline-end: 2%;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
   }
 
   .decorated-zone::after {
-    inset-block-end: 2%;
-    inset-inline-start: 2%;
+    inset-block-end: 10px;
+    inset-inline-start: 10px;
   }
 
   .header.iphone {
@@ -383,7 +399,8 @@
    ============================== */
 @media (768px <= width < 1024px) {
   .header__rec-badge {
-    inset-inline-end: 2.6%;
+    inset-block-start: 20px;
+    inset-inline-end: 29px;
   }
 
   .header__subtitle {
