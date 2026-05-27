@@ -75,16 +75,15 @@
     background-image: var(--bg-image);
   }
 
-
   .decorated-zone::before {
-    border-block-start: 1px solid var(--text-color);
-    border-inline-end: 1px solid var(--text-color);
-  }
+  border-block-start: 1px solid var(--text-color);
+  border-inline-end: 1px solid var(--text-color);
 
-  .decorated-zone::after {
-    border-block-end: 1px solid var(--text-color);
-    border-inline-start: 1px solid var(--text-color);
-  }
+
+.decorated-zone::after {
+  border-block-end: 1px solid var(--text-color);
+  border-inline-start: 1px solid var(--text-color);
+}
 
   .header__theme-menu-button {
     color: var(--text-color);
