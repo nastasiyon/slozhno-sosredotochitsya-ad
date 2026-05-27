@@ -19,7 +19,42 @@
   background-image: var(--bg-image);
 }
 
+.theme-dark .decorated-zone::before {
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.theme-dark .decorated-zone::after {
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
+/* Кнопки темы — тёмная тема */
+.theme-dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.theme-dark .header__theme-menu-button:hover {
+  outline: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+}
+
+.theme-dark .header__theme-menu-button:focus-visible {
+  outline: 1px solid var(--accent-color);
+}
+
+.theme-dark .header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
 /* Бейдж REC виден только в тёмной теме */
 .theme-dark .header__rec-badge {
   display: flex;
+}
+
+.theme-dark .content__section-title {
+  color: var(--accent-color);
+}
+
+.theme-dark .title-decor {
+  color: var(--title-decor-color);
 }
