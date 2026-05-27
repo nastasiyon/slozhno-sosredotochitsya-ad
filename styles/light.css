@@ -14,7 +14,6 @@
 /* Фон страницы — светлая тема */
 .theme-light .page {
   background-color: var(--bg-color);
-  background-image: var(--bg-image);
 }
 
 .theme-light .decorated-zone::before {

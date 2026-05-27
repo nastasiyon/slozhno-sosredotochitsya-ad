@@ -16,7 +16,6 @@
 /* Фон страницы — тёмная тема */
 .theme-dark .page {
   background-color: var(--bg-color);
-  background-image: var(--bg-image);
 }
 
 .theme-dark .decorated-zone::before {

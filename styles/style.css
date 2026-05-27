@@ -10,10 +10,12 @@
   line-height: var(--line-height);
   color: var(--text-color);
   background-color: var(--bg-color);
+}
+
+.cover {
   background-image: var(--bg-image);
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
-  background-attachment: fixed;
 }
 
 /* ==============================
@@ -40,8 +42,8 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  inset-block-end: 10px;
-  inset-inline-start: 10px;
+  inset-block-end: 20px;
+  inset-inline-start: 20px;
   inline-size: 25px;
   block-size: 25px;
   border-block-end: 1px solid var(--accent-color);
@@ -58,7 +60,6 @@
   align-items: start;
   padding: 20px 20px 0 20px;
   block-size: 100vh;
-  min-block-size: 668px;
 }
 
 .header__theme-menu {
@@ -141,6 +142,7 @@
 
 /* Заголовок шапки */
 .header__title {
+  justify-self: left;
   align-self: center;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: bold;
@@ -173,7 +175,7 @@
   display: grid;
   gap: 80px;
   padding-block: 60px;
-  padding-inline: 10px;
+  padding-inline: 20px;
 }
 
 /* ==============================
@@ -317,7 +319,7 @@
     padding: 10px 10px 0 10px;
   }
 
-    .header__rec-badge {
+  .header__rec-badge {
     inset-block-start: 10px;
     inset-inline-end: 19px;
   }
@@ -341,20 +343,15 @@
   }
 
   .header__subtitle {
-    max-inline-size: 768px;
+    max-inline-size: 45vh;
     justify-self: center;
   }
 
   .content {
     gap: 50px;
-    padding-block: 40px;
+    padding-block: 20px;
     padding-inline: 10px;
   }
-
-  .content__cards {
-    max-inline-size: 768px;
-  }
-
 
   .content__cards--three-cols {
     grid-template-columns: 1fr;
@@ -362,7 +359,6 @@
 
   /* Все секции: заголовок слева, контент справа */
   .content__section {
-    max-inline-size: 768px;
     grid-template-columns: 1fr;
   }
 
@@ -404,11 +400,19 @@
   }
 
   .header__subtitle {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .content__section.ipad {
     grid-template-columns: 1fr 2fr;
+  }
+
+  .title-break-word {
+    display: block;
+  }
+
+  .content__section-title > br {
+    display: none;
   }
 }
 /* ==============================
@@ -419,8 +423,6 @@
   .header__theme-menu {
     align-self: flex-start;
     justify-self: center;
-    padding-right: 0%;
-    padding-top: 0.5%;
   }
 
   .header__theme-menu-list {
@@ -429,7 +431,7 @@
 
   /* Подзаголовок шапки */
   .header__subtitle {
-    align-self: flex-start;
+    align-self: center;
   }
 
   /* Обычные секции (без title-decor на заголовке секции) */
